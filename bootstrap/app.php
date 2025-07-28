@@ -55,7 +55,7 @@ return Application::configure(basePath: dirname(__DIR__))
             return json('failed' , 'Invalid Request' ,'' , 400);
         });
 
-//        $exceptions->renderable(function (\Throwable $e, $request)   {
-//            return json('failed' , 'Internal Server Error' ,'' , 500);
-//        });
+        $exceptions->renderable(function (\Throwable $e, $request)   {
+            return json('failed' , 'Internal Server Error' ,'' , 500);
+        });
     })->create();
